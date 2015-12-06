@@ -9,6 +9,8 @@
   let clientRows = document.getElementById('slot-clients').getElementsByClassName('client-row');
   // let testimonials = document.getElementById('slot-about').getElementsByClassName('testimonial');
   let mobileNavMenu = document.getElementById('gsm-menu');
+  let modalTriggers = document.getElementsByClassName('modal-trigger');
+  let modalClosers = document.getElementsByClassName('modal-close');
   let testimonialCount = 0;
   let formErrorObj = {};
 
@@ -123,6 +125,22 @@
     mobileNavMenu.classList.toggle('active');
   }
 
+  function handleModalTriggerClick(e) {
+    e.preventDefault();
+
+    let modalID = e.currentTarget.getAttribute('data-modal-name');
+    document.getElementById('modal-' + modalID).style.display = 'block';
+  }
+
+  function handleModalClose(e) {
+    e.preventDefault();
+
+    let modals = document.querySelectorAll('.modal');
+    for (var i = 0; i < modals.length; i++) {
+      modals[i].style.display = 'none';
+    }
+  }
+
   document.getElementById('contact-form-submit').addEventListener('click', handleFormSubmit);
   document.getElementById('gsm-menu-trigger').addEventListener('click', handleMenuClick);
 
@@ -133,6 +151,14 @@
   for (var i = 0; i < formErrors.length; i++) {
     let error = formErrors[i];
     formErrorObj[error.getAttribute('data-error-type')] = error;
+  }
+
+  for (var i = 0; i < modalTriggers.length; i++) {
+    modalTriggers[i].addEventListener('click', handleModalTriggerClick);
+  }
+
+  for (var i = 0; i < modalClosers.length; i++) {
+    modalClosers[i].addEventListener('click', handleModalClose);
   }
 
   // rotateTestimonial();
