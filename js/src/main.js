@@ -3,7 +3,7 @@
  */
 (function() {
   const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
-  const CONTACT_POST_URL = 'https://formspree.io/alexqguo@gmail.com';
+  const CONTACT_POST_URL = 'https://formspree.io/info@guildsports.com';
   let contactForm = document.getElementById('gsm-contact-form');
   let formErrors = contactForm.getElementsByClassName('error');
   let clientRows = document.getElementById('slot-clients').getElementsByClassName('client-row');
