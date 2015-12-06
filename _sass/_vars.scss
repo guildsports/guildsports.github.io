@@ -1,0 +1,99 @@
+/**
+ * Basic variable and mixin definitions
+ */
+
+
+// Font
+$logo-font-family: 'Playfair Display SC', serif;
+$base-font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.3;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fafafa;
+$brand-color:      #2a7ae2;
+
+// Width of the content area
+$on-palm:          700px;
+$on-laptop:        800px;
+
+// Colors
+$red: #f30;
+$black: #000;
+$green: #1EBC30;
+$gray: #ccc;
+$light-gray: #ddd;
+$lighter-gray: #eee;
+$dark-gray: #888;
+$darker-gray: #444;
+$white: #fff;
+$blue: #0F288C;
+$dark-blue: #011464;
+$silver: #adadad;
+$grey-color: #828282; // came by default
+$grey-color-light: lighten($grey-color, 40%); // came by default
+$grey-color-dark: darken($grey-color, 25%); // came by default
+
+// Sizes
+$desktop-container-size: 1020px;
+
+// Other
+$banner-image: url('/images/bg.jpg');
+
+// Mixins
+@mixin container() {
+  min-width: $on-palm;
+  max-width: $desktop-container-size;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  @include media-query($on-palm) {
+    margin: 0;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 0 5px;
+  }
+}
+
+@mixin transition($duration) {
+  transition: $duration;
+  -webkit-transition: $duration;
+  -moz-transition: $duration;
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}

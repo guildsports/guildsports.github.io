@@ -1,0 +1,22 @@
+# Clients data
+
+- name: Mamadou Gueye
+  country: Senegal
+  flag: sn
+  events: Long Jump
+  accomplishments: 3rd place @ African Championships, 2015
+  prs: 8.12m
+  url_path: mamadou-gueye
+- name: Ben Youssef Meïté
+  country: Ivory Coast
+  flag: ci
+  events: 100m
+  accomplishments: 2015 African Champion, 100m/200m
+  prs: 10.04 (-2.0)
+  url_path: ben-youssef-meite
+# - name: Taffawee Johson
+#   country: Jamaica
+#   flag: jm
+#   events: 100m
+#   prs: 10.13 (+1.3)
+#   url_path: taffawee-johnson

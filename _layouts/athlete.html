@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include athlete-header.html %}
+
+    <div id="ath-content" class="gsm-ath">
+      <div class="ath-base">
+        {% if page.image_path != null %}
+          <img src="{{ page.image_path }}" alt="{{ page.athlete_name }}" class="profile-pic"/>
+        {% else %}
+          <span class="profile-pic">{{ page.custom_image }}</span>
+        {% endif %}
+
+        <h2>{{ page.athlete_name }}</h2>
+        <ul class="ath-list">
+          <li><strong>Country:</strong> {{ page.athlete_country }}</li>
+          <li><strong>Events:</strong> {{ page.athlete_events }}</li>
+          <li><strong>PR(s):</strong> {{ page.athlete_prs }}</li>
+          <li><strong>Date of Birth:</strong> {{ page.athlete_dob }}</li>
+          <li><strong>Agent:</strong> {{ page.athlete_agent }}</li>
+        </ul>
+      </div>
+
+      {{ content }}
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

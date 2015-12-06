@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Page Not Found</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/png" href="/images/favicon.png"/>
+  </head>
+
+  <style>
+    .container {
+      max-width: 1020px;
+      min-width: 1020px;
+      margin: 50px auto;
+      padding: 0 10px;
+    }
+
+    .flt-left {
+      float: left;
+    }
+
+    .flt-right {
+      float: right;
+    }
+
+    .footer {
+      border-top: 1px solid #ccc;
+    }
+  </style>
+
+  <body>
+
+    <div id="content" class="container">
+      <h2>Oops!</h2>
+      <p>
+        The page you are looking for could not be found.
+        <a href="/">Click here to return home.</a>
+      </p>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="flt-left">
+          &copy; 2015 Guild Sports Management
+        </div>
+        <div class="flt-right">
+
+        </div>
+      </div>
+    </footer>
+
+  </body>
+
+</html>

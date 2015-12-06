@@ -1,0 +1,63 @@
+#ath-content {
+
+  .ath-base {
+    margin-bottom: 20px;
+
+    .profile-pic {
+      width: 400px;
+      float: left;
+      border-radius: 2px;
+      margin-right: 10px;
+    }
+
+    h2 {
+      margin-top: 20px;
+      margin-bottom: 8px;
+    }
+
+    .ath-list {
+      list-style-type: none;
+
+      li {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  .ath-accomplishments {
+    list-style-type: square;
+  }
+
+  .ath-youtube {
+    margin-bottom: 20px;
+
+    .flt-left, .flt-right {
+      width: 49%;
+
+      iframe {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-query($on-palm) {
+    .ath-base {
+      .profile-pic {
+        width: 100%;
+        text-align: center; //for getty embed
+      }
+    }
+
+    .ath-youtube {
+      .flt-left, .flt-right {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+}
+
+#ath-content, .ath-base, .ath-youtube {
+  @include clearfix();
+}

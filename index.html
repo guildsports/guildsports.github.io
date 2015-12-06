@@ -1,0 +1,147 @@
+---
+layout: default
+---
+
+<section id="slot-about" class="gsm-slot">
+  <div class="gsm-space"></div>
+  <div class="gsm-slot-inner">
+    <h1>Guild Sports Management</h1>
+
+    <article class="gsm-testimonials">
+      <p>
+        We will commit to you, our client, an unwavering dedication in order to strengthen, amplify, and promote your personal brand.  Guild Sports Management will provide a strategically competitive advantage based on extensive management experience and professional insight.   Our focused approach is individually catered to every athlete, ensuring sustainable progress and heightened execution in order to develop the most substantial career possible.
+      </p>
+      &mdash;Rolston Braithwaite, Co-Founder
+    </article>
+  </div>
+</section>
+
+<section id="slot-founders" class="gsm-slot">
+  <div class="gsm-slot-inner">
+    <article class="gsm-founders">
+      <div class="rolston">
+        <div class="founder-block">
+          <img src="/images/rolston.jpg" alt="Rolston Braithwaite, Recruiting Manager & Cofounder"/>
+          <span class="name-title">
+            <span class="name">Rolston Braithwaite</span>
+            <br>Co-Founder, Recruiting Manager
+          </span>
+        </div>
+        My passion for and knowledge of the sport of track and field spans over a decade; I was awarded All-American status through high school, college, as well as MVP of the USATF Club National Championship.  In addition I have dedicated an immense amount of time apart from personal competition to learn from and assist others advance towards greatness.  I have the expertise and tenacity to spot talented athletes from around the globe and get them to that next level.
+      </div>
+
+      <div class="fred">
+        <div class="founder-block">
+          <img src="/images/fred.png" alt="Fred Something, Agent Manager & Cofounder" />
+          <span class="name-title">
+            <span class="name">Fred Rosengarten</span>
+            <br>Co-Founder, Managing Member
+          </span>
+        </div>
+        I'm a lawyer/sports agent and I've been in private practice for 8 years, representing corporate and business clients in transactions and occasionally litigation. I've been involved with track and field since 2011, and enjoy making business deals and doing my best for clients. I bring the same skills to representing athletes and helping them have stellar careers.
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="slot-business" class="gsm-slot">
+  <div class="gsm-slot-inner business-first">
+    <div class="gsm-service">
+      <i class="icons big">
+        <i class="building outline icon"></i>
+        <i class="add corner icon"></i>
+      </i><br>
+      <h3>Obtaining Sponsors</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="travel icon big"></i><br>
+      <h3>Contract Negotiation</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="users icon big"></i><br>
+      <h3>Trainers & Coaches</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="plane icon big"></i><br>
+      <h3>Meet Placement</h3>
+    </div>
+  </div>
+
+  <div class="gsm-slot-inner business-last">
+    <div class="gsm-service">
+      <i class="comments outline icon big"></i><br>
+      <h3>Professional Assistance</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="file text icon big"></i><br>
+      <h3>Visas</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="money icon big"></i><br>
+      <h3>Financial Management</h3>
+    </div>
+    <div class="gsm-service">
+      <i class="legal icon big"></i><br>
+      <h3>Legal Counseling</h3>
+    </div>
+  </div>
+</section>
+
+<section id="slot-clients" class="gsm-slot">
+  <div class="gsm-slot-inner">
+    <h2>Our Clients</h2>
+    <article class="gsm-clients">
+      <table class="gsm-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Country</th>
+            <th>Event(s)</th>
+            <th>Personal Best</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for athlete in site.data.clients %}
+            <tr class="client-row" data-href="/athletes/{{ athlete.url_path }}">
+              <td>{{ athlete.name }}</td>
+              <td><i class="flag {{ athlete.flag }}"></i>{{ athlete.country }}</td>
+              <td>{{ athlete.events }}</td>
+              <td>{{ athlete.prs }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </article>
+  </div>
+</section>
+
+<section id="slot-contact" class="gsm-slot">
+  <div class="gsm-slot-inner">
+    <h2>Get In Touch</h2>
+    <form id="gsm-contact-form" class="gsm-contact-form">
+      <p>
+        Please feel free to send us an email using the form below (all fields required):
+      </p>
+      <div class="input-row">
+        <input type="text" name="name" placeholder="Full Name">
+        <div data-error-type="name" class="error"></div>
+      </div>
+      <div class="input-row">
+        <input type="email" name="email" placeholder="Your Email Address">
+        <div data-error-type="email" class="error"></div>
+      </div>
+      <div class="input-row">
+        <input type="text" name="subject" placeholder="Subject">
+        <div data-error-type="subject" class="error"></div>
+      </div>
+      <div class="input-row">
+        <textarea name="message" placeholder="Mesage..."></textarea>
+        <div data-error-type="message" class="error"></div>
+      </div>
+      <button id="contact-form-submit" class="gsm-submit">Submit</button>
+    </form>
+    <div class="gsm-form-ty hidden">
+      Thanks! We'll do our best to get back to your shortly.
+    </div>
+  </div>
+</section>

@@ -1,0 +1,193 @@
+// Home page header specific
+.gsm-header {
+  height: 60px;
+  background-color: rgba($background-color, 0.95);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+
+  .guild {
+    color: $darker-gray;
+  }
+
+  @include box-shadow(0, 1px, 1px, $background-color);
+
+  .gsm-navlist {
+    list-style-type: none;
+    float: right;
+
+    .listitem {
+      float: left;
+      margin: 20px 20px 0;
+
+      .navlist-link {
+        color: $black;
+
+        &:hover .icon {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  @include media-query($on-palm) {
+    @include box-shadow(0, 0, 0, $light-gray);
+    height: 40px;
+    text-align: center;
+
+    .gsm-menu {
+      list-style-type: none;
+      position: absolute;
+      background-color: rgba($background-color, 0.95);
+      top: 40px;
+      right: 100%;
+      width: 100%;
+
+      @include transition(0.4s);
+
+      &.active {
+        right: 0;
+      }
+
+      li {
+        float: left;
+        margin: 4px 0 6px 18px;
+
+        a {
+          color: $black;
+        }
+      }
+    }
+  }
+}
+
+// Athlete header specific
+.gsm-ath-header {
+  height: 60px;
+  width: 100%;
+  background-color: $dark-blue;
+  color: $white;
+
+  .guild {
+    color: $white !important;
+  }
+
+  @include media-query($on-palm) {
+    height: 40px;
+    text-align: center;
+  }
+}
+
+// Both headers, common
+.gsm-header, .gsm-ath-header {
+  .logo {
+    @include media-query($on-palm) {
+      display: none;
+    }
+
+    font-style: italic;
+    display: inline-block;
+    margin: 5px 0 0 9px;
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  @include media-query($on-palm) {
+    .gsm-menu-trigger {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      color: $black;
+
+      &:hover {
+        text-decoration: none;
+        cursor: pointer;
+      }
+    }
+
+    .guild {
+      color: $black;
+      font-size: 30px;
+      font-family: $logo-font-family;
+    }
+  }
+}
+
+.gsm-space {
+  height: 80px;
+
+  @include media-query($on-palm) {
+    height: 50px;
+  }
+}
+
+.gsm-slot {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.gsm-pipe {
+  border-left: 1px solid $gray;
+  margin: 0 5px;
+}
+
+.gsm-footer {
+  padding: 40px 0;
+  font-size: 14px;
+  background-color: $darker-gray;
+  color: $white;
+
+  .left, .right {
+    float: left;
+    width: 50%
+  }
+
+  .right {
+    text-align: right;
+  }
+
+  a, .gsm-pipe {
+    color: $white;
+  }
+
+  @include media-query($on-palm) {
+    .left, .right {
+      width: 100%;
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.gsm-slot .gsm-slot-inner, .gsm-ath {
+  @include container();
+}
+
+.flt-left {
+  float: left;
+}
+
+.flt-right {
+  float: right;
+}
+
+.mobile-only {
+  display: none;
+
+  @include media-query($on-palm) {
+    display: initial;
+  }
+}
+
+.desktop-only {
+  display: initial;
+
+  @include media-query($on-palm) {
+    display: none;
+  }
+}
