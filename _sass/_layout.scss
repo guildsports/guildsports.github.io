@@ -137,6 +137,7 @@
   font-size: 14px;
   background-color: $darker-gray;
   color: $white;
+  @include box-shadow(0px 300px 0px $darker-gray);
 
   .left, .right {
     float: left;
