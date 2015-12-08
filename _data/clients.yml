@@ -18,10 +18,15 @@
   events: Long Jump
   prs: 8.10m
   url_path: levance-williams
-
-# - name: Taffawee Johson
-#   country: Jamaica
-#   flag: jm
-#   events: 100m
-#   prs: 10.13 (+1.3)
-#   url_path: taffawee-johnson
+- name: Taffawee Johson
+  country: Jamaica
+  flag: jm
+  events: 100m
+  prs: 10.13
+  url_path: taffawee-johnson
+# - name: Moussa Dembélé
+#   country: Senegal
+#   flag: sn
+#   events: 60HH/110HH
+#   prs: 7.75/13.58
+#   url_path: moussa-dembele
