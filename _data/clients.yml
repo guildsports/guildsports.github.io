@@ -24,6 +24,12 @@
   events: 100m
   prs: 10.13
   url_path: taffawee-johnson
+- name: Carlton Lavong
+  country: United States
+  flag: us
+  events: Long Jump
+  prs: 7.77m, 8.08 wind-aided
+  url_path: carlton-lavong
 # - name: Moussa Dembélé
 #   country: Senegal
 #   flag: sn
