@@ -30,9 +30,9 @@
   events: Long Jump
   prs: 7.77m, 8.08m wind-aided
   url_path: carlton-lavong
-# - name: Moussa Dembélé
-#   country: Senegal
-#   flag: sn
-#   events: 60HH/110HH
-#   prs: 7.75/13.58
-#   url_path: moussa-dembele
+- name: Moussa Dembélé
+  country: Senegal
+  flag: sn
+  events: 60HH/110HH
+  prs: 7.75/13.58
+  url_path: moussa-dembele
