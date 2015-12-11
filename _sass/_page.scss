@@ -5,8 +5,7 @@
 
   h1 {
     font-family: $logo-font-family;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: $dark-gray;
+    text-shadow: 2px 2px 2px $darker-gray;
   }
 
   .gsm-slot-inner {
