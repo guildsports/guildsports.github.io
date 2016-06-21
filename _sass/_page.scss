@@ -1,4 +1,4 @@
-#slot-about {
+#about {
   background: $banner-image;
   background-size: cover;
   height: 500px;
@@ -52,7 +52,7 @@
   }
 }
 
-#slot-founders {
+#founders {
   padding-bottom: 40px;
   background-color: #444;
 
@@ -125,7 +125,7 @@
   }
 }
 
-#slot-business {
+#business {
   padding: 40px 0 30px 0;
 
   .business-first {
@@ -156,7 +156,7 @@
   }
 }
 
-#slot-clients {
+#clients {
   background-color: $dark-blue;
   color: $white;
   padding-bottom: 30px;
@@ -205,7 +205,7 @@
   }
 }
 
-#slot-contact {
+#contact {
   min-height:300px;
 
   h2 {

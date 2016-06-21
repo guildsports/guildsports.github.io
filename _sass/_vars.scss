@@ -2,13 +2,12 @@
  * Basic variable and mixin definitions
  */
 
-
 // Font
 $logo-font-family: 'Playfair Display SC', serif;
-$base-font-family: "Cabin", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$base-font-weight: 400;
-$small-font-size:  $base-font-size * 0.875;
+$base-font-family: 'Titillium Web', Arial, sans-serif;
+$base-font-size:   15px;
+$base-font-weight: 300;
+$small-font-size:  12px;
 $base-line-height: 1.3;
 
 $spacing-unit:     30px;
@@ -34,9 +33,6 @@ $white: #fff;
 $blue: #0F288C;
 $dark-blue: #011464;
 $silver: #adadad;
-$grey-color: #828282; // came by default
-$grey-color-light: lighten($grey-color, 40%); // came by default
-$grey-color-dark: darken($grey-color, 25%); // came by default
 
 // Sizes
 $desktop-container-size: 1020px;
@@ -85,13 +81,10 @@ $banner-image: url('/images/bg.jpg');
   }
 }
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
+/*
+Use media queries like this:
+@include media-query($on-palm) { ... }
+*/
 @mixin media-query($device) {
     @media screen and (max-width: $device) {
         @content;

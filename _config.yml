@@ -14,8 +14,8 @@ markdown: kramdown
 exclude: [node_modules]
 
 #these came by default, not sure if will use
-email: your-email@domain.com
-description: Guild Sports Management website for track and field athletes
+email: info@guildsports.com
+description: Guild Sports Management is a sports management company for track and field athletes all around the globe.
 keywords: guild sports management, guild sports, track and field, athletics, 100m, 200m, 400m, long jump, triple jump, high jump, pole vault, shot put, discus, javelin, hammer throw
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://guildsports.com" # the base hostname & protocol for your site

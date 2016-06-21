@@ -6,8 +6,7 @@
     .profile-pic {
       width: 400px;
       float: left;
-      border-radius: 2px;
-      margin-right: 10px;
+      margin-right: 15px;
     }
 
     h2 {
@@ -17,6 +16,7 @@
 
     .ath-list {
       list-style-type: none;
+      font-size: 18px;
 
       li {
         margin-bottom: 5px;
@@ -26,6 +26,7 @@
 
   .ath-accomplishments {
     list-style-type: square;
+    margin-bottom: 30px;
   }
 
   .ath-youtube {
@@ -41,7 +42,17 @@
   }
 
   @include media-query($on-palm) {
+    padding: 0;
+
     .ath-base {
+      h2 {
+        margin-top: 0;
+      }
+
+      .ath-list {
+        font-size: $base-font-size;
+      }
+
       .profile-pic {
         width: 100%;
         text-align: center; //for getty embed

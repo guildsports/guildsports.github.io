@@ -1,5 +1,18 @@
-# Clients data
+# Clients data, used on homepage
+# For flag code, see http://semantic-ui.com/elements/flag.html
 
+- name: Claudia Garcia Jou
+  country: Spain
+  flag: es
+  events: High Jump
+  prs: 1.90m
+  url_path: claudia-garcia-jou
+- name: William Barnes
+  country: Puerto Rico
+  flag: pr
+  events: 110mh
+  prs: 13.41
+  url_path: will-barnes
 - name: Mamadou Gueye
   country: Senegal
   flag: sn

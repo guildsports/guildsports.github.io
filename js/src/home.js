@@ -1,30 +1,15 @@
 /**
- * Main site JS
+ * Home page JS
  */
 (function() {
   const EMAIL_REGEX = /^\S+@\S+\.\S+$/;
   const CONTACT_POST_URL = 'https://formspree.io/info@guildsports.com';
   let contactForm = document.getElementById('gsm-contact-form');
   let formErrors = contactForm.getElementsByClassName('error');
-  let clientRows = document.getElementById('slot-clients').getElementsByClassName('client-row');
-  // let testimonials = document.getElementById('slot-about').getElementsByClassName('testimonial');
+  let clientRows = document.getElementById('clients').getElementsByClassName('client-row');
   let mobileNavMenu = document.getElementById('gsm-menu');
-  let modalTriggers = document.getElementsByClassName('modal-trigger');
-  let modalClosers = document.getElementsByClassName('modal-close');
   let testimonialCount = 0;
   let formErrorObj = {};
-
-  function rotateTestimonial() {
-    let current = testimonialCount % testimonials.length;
-    let prev = (testimonialCount - 1) % 3;
-
-    testimonials[current].classList.add('active');
-    if (testimonials[prev]) {
-      testimonials[prev].classList.remove('active');
-    }
-
-    testimonialCount++;
-  }
 
   function constructFormData(formInputs) {
     let formData = {};
@@ -125,22 +110,6 @@
     mobileNavMenu.classList.toggle('active');
   }
 
-  function handleModalTriggerClick(e) {
-    e.preventDefault();
-
-    let modalID = e.currentTarget.getAttribute('data-modal-name');
-    document.getElementById('modal-' + modalID).style.display = 'block';
-  }
-
-  function handleModalClose(e) {
-    e.preventDefault();
-
-    let modals = document.querySelectorAll('.modal');
-    for (var i = 0; i < modals.length; i++) {
-      modals[i].style.display = 'none';
-    }
-  }
-
   document.getElementById('contact-form-submit').addEventListener('click', handleFormSubmit);
   document.getElementById('gsm-menu-trigger').addEventListener('click', handleMenuClick);
 
@@ -153,14 +122,4 @@
     formErrorObj[error.getAttribute('data-error-type')] = error;
   }
 
-  for (var i = 0; i < modalTriggers.length; i++) {
-    modalTriggers[i].addEventListener('click', handleModalTriggerClick);
-  }
-
-  for (var i = 0; i < modalClosers.length; i++) {
-    modalClosers[i].addEventListener('click', handleModalClose);
-  }
-
-  // rotateTestimonial();
-  // setInterval(rotateTestimonial, 8000);
 }());
