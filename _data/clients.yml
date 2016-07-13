@@ -19,12 +19,6 @@
   events: Long Jump
   prs: 8.12m
   url_path: mamadou-gueye
-- name: Ben Youssef Meïté
-  country: Ivory Coast
-  flag: ci
-  events: 100m
-  prs: 10.04 (-2.0)
-  url_path: ben-youssef-meite
 - name: LeVance Williams Sr.
   country: United States
   flag: us
