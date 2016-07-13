@@ -8,7 +8,12 @@
 
     {% include athlete-header.html %}
 
-    <div id="ath-content" class="gsm-ath">
+    <div id="ath-content">
+      {% if page.image_path != null %}
+        <div class="ath-blur" style="background-image: url('{{ page.image_path }}')"></div>
+        <div class="ath-mask"></div>
+      {% endif %}
+
       <div class="ath-base">
         {% if page.image_path != null %}
           <img src="{{ page.image_path }}" alt="{{ page.athlete_name }}" class="profile-pic"/>
@@ -25,7 +30,9 @@
           <li><strong>Agent:</strong> {{ page.athlete_agent }}</li>
         </ul>
       </div>
+    </div>
 
+    <div class="gsm-ath">
       {{ content }}
     </div>
 

@@ -1,7 +1,38 @@
 #ath-content {
 
+  position: relative;
+  overflow: hidden;
+
+  .ath-blur {
+    -webkit-filter: blur(30px);
+    filter: blur(30px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='30');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: -60px;
+    right: -60px;
+    bottom: -60px;
+    top: -60px;
+  }
+
+  .ath-mask {
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+  }
+
   .ath-base {
-    margin-bottom: 20px;
+    @include container();
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    color: $white;
 
     .profile-pic {
       width: 400px;
@@ -23,6 +54,14 @@
       }
     }
   }
+}
+
+#ath-content, .ath-base, .ath-youtube {
+  @include clearfix();
+}
+
+.gsm-ath {
+  padding-top: 30px;
 
   .ath-accomplishments {
     list-style-type: square;
@@ -40,13 +79,17 @@
       }
     }
   }
+}
 
-  @include media-query($on-palm) {
-    padding: 0;
-
+@include media-query($on-palm) {
+  #ath-content {
     .ath-base {
+      color: $text-color;
+      padding: 0; // Overwrite container() mobile padding for full width img
+
       h2 {
         margin-top: 0;
+        padding: 0 5px; // Put container() mobile padding on the h2
       }
 
       .ath-list {
@@ -55,9 +98,16 @@
 
       .profile-pic {
         width: 100%;
-        text-align: center; //for getty embed
       }
     }
+
+    .ath-blur, .ath-mask {
+      display: none;
+    }
+  }
+
+  .gsm-ath {
+    padding-top: 0;
 
     .ath-youtube {
       .flt-left, .flt-right {
@@ -66,9 +116,4 @@
       }
     }
   }
-
-}
-
-#ath-content, .ath-base, .ath-youtube {
-  @include clearfix();
 }
